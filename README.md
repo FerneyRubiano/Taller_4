@@ -14,7 +14,7 @@ Crear archivo requirements.txt python -m pip freeze > requirements.txt
 
 Crear main.py
 
-Correr servidor fastapi dev app/main.py
+Correr servidor fastapi dev main.py
 
 En Azure el comando para iniciar la app en producción es: fastapi run app/main.py
 
