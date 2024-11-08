@@ -5,6 +5,7 @@ from database import SessionLocal, engine
 from models import Base
 import crud, schemas
 
+
 app = FastAPI()
 
 # Crear las tablas en la base de datos
@@ -43,3 +44,4 @@ def update_user(user_id: int, user: schemas.UserBase, db: Session = Depends(get_
 def delete_user(user_id: int, db: Session = Depends(get_db)):
     crud.delete_user(db, user_id=user_id)
     return {"ok": True}
+

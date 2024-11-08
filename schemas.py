@@ -1,12 +1,11 @@
-# schemas.py
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 class UserBase(BaseModel):
     id: int
     first_name: str
     last_name: str
-    email: str
-    phone: int
+    email: EmailStr
+    phone: str  # Asegúrate de que sea str
 
 class UserCreate(UserBase):
     pass
@@ -19,4 +18,4 @@ class User(UserBase):
     phone: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
