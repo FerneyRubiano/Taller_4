@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 El archivo .env es sensible
-.env
+# .env
 
 # C extensions
 *.so
